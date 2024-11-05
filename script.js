@@ -13,12 +13,21 @@ function calculateInternalMarks() {
     const mid2 = parseFloat(document.getElementById("mid2").value) || 0;
     const quiz1 = parseFloat(document.getElementById("quiz1").value) || 0;
     const quiz2 = parseFloat(document.getElementById("quiz2").value) || 0;
+    const ass1 = parseFloat(document.getElementById("ass1").value);
+    const ass2 = parseFloat(document.getElementById("ass2").value);
     const attendance = parseInt(document.getElementById("attendance").value) || 0;
+    
+    const assMax = Math.max(ass1,ass2);
+    const assMin = Math.min(ass1,ass2);
+    var ass = (assMax/12)*2.8 + (assMin/12)*0.7
+
+    const quizMin = Math.min(quiz1, quiz2);
+    const quizMax = Math.max(quiz1, quiz2);
+    var quiz = (quizMax/12)*2.8 + (quizMin/12)*0.7
 
     const maxMid = Math.max(mid1, mid2);
     const minMid = Math.min(mid1, mid2);
     const sessional = (maxMid * 0.8) + (minMid * 0.2);
-    const quiz = Math.min(Math.max(quiz1, quiz2)) * 0.7;
 
     let attendanceMarks = 0;
     if (attendance >= 90) attendanceMarks = 5;
@@ -26,7 +35,7 @@ function calculateInternalMarks() {
     else if (attendance >= 80) attendanceMarks = 3;
     else if (attendance >= 75) attendanceMarks = 2;
 
-    const totalInternal = sessional + quiz + attendanceMarks - 1.4;
+    const totalInternal = sessional + quiz + attendanceMarks + ass;
     document.getElementById("internalResult").textContent = `Total Internal Marks: ${totalInternal.toFixed(2)}`;
 }
 
