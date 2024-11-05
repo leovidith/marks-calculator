@@ -26,7 +26,7 @@ function calculateInternalMarks() {
     else if (attendance >= 80) attendanceMarks = 3;
     else if (attendance >= 75) attendanceMarks = 2;
 
-    const totalInternal = sessional + quiz + attendanceMarks - 1;
+    const totalInternal = sessional + quiz + attendanceMarks - 1.4;
     document.getElementById("internalResult").textContent = `Total Internal Marks: ${totalInternal.toFixed(2)}`;
 }
 
