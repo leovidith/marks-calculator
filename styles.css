@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: rgb(51, 58, 69);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #e0e0e0;
+}
+
+h1, h2 {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: rgb(46, 52, 61);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 16px;
+}
+
+.button-container button:hover {
+    background-color: rgb(244, 76, 127);
+    transform: scale(1.05);
+}
+
+.button-container button:active {
+    transform: scale(1);
+}
+
+.section {
+    display: none;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.section.active {
+    display: block;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.result {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffa500;
+    text-align: center;
+}
+
+.add-subject-button, .calculate-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 16px;
+    background-color: rgb(46, 52, 61);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.add-subject-button:hover, .calculate-button:hover {
+    background-color: rgb(244, 76, 127);
+    transform: scale(1.05);
+}
+
+.add-subject-button:active, .calculate-button:active {
+    transform: scale(1);
+}
+
+.subject-entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 4px;
+}
+
+.grade-dropdown, .credits-input {
+    width: 45%;
+    padding: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #444;
+    border: 1px solid #555;
+    border-radius: 4px;
+}
+
+.grade-dropdown:focus, .credits-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.result {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    font-weight: bold;
+    color: #ffa500;
+    margin-top: 10px;
+}
