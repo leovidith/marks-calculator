@@ -8,12 +8,14 @@
 
 body {
     font-family: 'Nunito', sans-serif;
-    background-color: rgb(51, 58, 69);
+    /* background-color: rgb(51, 58, 69); */
     color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background: linear-gradient(to right, #606c88, #3f4c6b);
+
 }
 
 .container {
